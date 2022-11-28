@@ -7,7 +7,7 @@
 
 ### requirements
 ```js
-[ javadscript ]
+[ javascript ]
 > jsdom
 > express
 > morgan (logging)
