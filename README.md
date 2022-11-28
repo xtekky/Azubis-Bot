@@ -1,3 +1,5 @@
+owner patched and have no time to reverse again
+
 ## Azubis Bot - (for fun / js reversing)
  azubis.live bot | Free TikTok Likes
 
