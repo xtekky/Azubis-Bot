@@ -1,13 +1,13 @@
 const Signer  = require('./v4/index');
 const express = require('express')
+var morgan    = require('morgan')
 
-const signer = new Signer();
-const app    = express()
-const port   = 3000
+const signer  = new Signer();
+const app     = express()
+const port    = 3000
 
-
+app.use(morgan('combined'))
 app.post('/sign', (req, res) => {
-    console.log(req.query)
     res.send({
         __data__: signer.sign(
             decodeURIComponent(req.query.data), 
@@ -23,5 +23,5 @@ app.post('/init', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`signer ready on 127.0.0.1:${port}`)
 })
